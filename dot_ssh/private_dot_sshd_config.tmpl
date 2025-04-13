@@ -1,0 +1,13 @@
+{{ if eq .chezmoi.hostname "utils" }}
+Port 22
+PermitRootLogin no
+PasswordAuthentication no
+ChallengeResponseAuthentication no
+UsePAM no
+X11Forwarding no
+PrintMotd no
+AcceptEnv LANG LC_*
+Subsystem sftp /usr/lib/ssh/sftp-server
+AuthorizedKeysFile .ssh/authorized_keys
+AllowUsers jason
+{{ end }}
